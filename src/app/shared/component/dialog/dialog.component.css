@@ -1,0 +1,6 @@
+.mat-foot-button {
+  justify-content: flex-end;
+}
+.dialog-btn-right button:first-child {
+  margin-right: 20px;
+}

@@ -1,0 +1,6 @@
+<h3 class="font-weight-normal text-center mt-4">{{ title }}</h3>
+<div class="row">
+  <div class="col-sm-4 mb-4" *ngFor="let card of cardList">
+      <app-card [data]="card"></app-card>
+  </div>
+</div>

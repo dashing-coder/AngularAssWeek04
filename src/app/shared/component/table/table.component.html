@@ -1,0 +1,31 @@
+<div class="table-responsive mt-4">
+  <table class="table table-hover table-bordered table-striped">
+    <thead [ngClass]="headerClass">
+    <tr>
+      <th scope="col" *ngIf="showAction"></th>
+      <th scope="col">SL</th>
+      <th scope="col">Name</th>
+      <th scope="col">Division</th>
+      <th scope="col">Established</th>
+      <th scope="col">Population</th>
+      <th scope="col">Area (sq.km)</th>
+      <th scope="col">Density(sq.km)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let district of districtList; index as sl;">
+      <td *ngIf="showAction" class="tdDelete text-danger"><i class="fas fa-minus-circle" (click)="deleteRow(sl)"></i></td>
+      <td>{{ sl + 1 }}</td>
+      <td >{{ district.name }}</td>
+      <td>{{ district.division }}</td>
+      <td>{{ district.established }}</td>
+      <td>{{ district.population | bdLocal }}</td>
+      <td>{{ district.areaSqKm }}</td>
+      <td>{{ district.density }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+

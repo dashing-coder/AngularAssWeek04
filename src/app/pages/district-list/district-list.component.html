@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="page-header py-3 mx-auto text-center pt-5 pb-2">
+        <h1 class="display-4">{{ districtTitle }}: {{ numberOfDistrict }}</h1>
+      </div>
+      <app-table
+        [districtList]="districtList"
+        (rowRemoved)="reCount($event)"
+        [headerClass]="'bg-success text-white'"
+      ></app-table>
+
+      <ng-container *ngIf="deletedDistrictList.length>0">
+        <div class="page-header py-3 mx-auto text-center pt-5 pb-2">
+          <h1 class="display-4">{{ districtTitle }}: {{ numberOfDeletedDistrict }}</h1>
+        </div>
+        <app-table
+          [districtList]="deletedDistrictList"
+          [showAction]="false"
+          [headerClass]="'bg-danger text-white'"
+        ></app-table>
+      </ng-container>
+
+    </div>
+  </div>
+</div>
