@@ -3,7 +3,7 @@ import { DistrictService } from '../../common/services';
 import { DistrictInfo } from '../../shared/interfaces';
 import { Title } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material/dialog';
-import {DialogComponent} from "../../shared/component/dialog/dialog.component";
+import {DialogComponent} from '../../shared/component/dialog/dialog.component';
 
 @Component({
   selector: 'app-district-list',
